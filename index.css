@@ -62,7 +62,7 @@ div#biotext {
 div#userinfodiv {
     background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     background: linear-gradient(to bottom right, lightgrey, grey);
-    background: cadetblue;
+    background: darkred;
     height: 250px;
     /* position: relative; */
     display: inline-block;
@@ -159,7 +159,7 @@ div#dummydiv {
     background: #777;
     color: white;
     background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    background: darkred;
+    background: blue;
     color: white;
 }
 
