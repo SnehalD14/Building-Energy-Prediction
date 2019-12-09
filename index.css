@@ -1,11 +1,11 @@
-img#profilepic {
+/* img#profilepic {
     border-radius: 50%;
     margin-left: 25px;
     margin-top: 25px;
     width: 80%;
     height: 80%;
     transition: 0.5s;
-}
+} */
 
 span#name {
     font-family: times;
@@ -29,7 +29,7 @@ div#userinfo {
 }
 
 div#name {
-    font-family: cursive;
+    font-family: times;
     /* vertical-align: middle; */
     /* margin-top: 10px; */
     transition: 0.5s;
@@ -37,7 +37,7 @@ div#name {
 }
 
 div#info {
-    font-family: cursive;
+    font-family: times ;
     text-align: center;
     font-size: 12px;
     pointer-events: all;
@@ -48,7 +48,7 @@ div#Bio {
     margin-left: 20px;
     margin-right: 20px;
     width: calc(100% - 300px);
-    font-family: cursive;
+    font-family: times;
     height: 100%;
     float: right;
     position: relative;
@@ -131,7 +131,7 @@ div#resume-start {
     height: 150%;
     top: 50px;
     position: relative;
-    font-family: cursive;
+    font-family: times;
     transition: top 0.5s;
 }
 
