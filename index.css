@@ -1,11 +1,11 @@
-/* img#profilepic {
+img#profilepic {
     border-radius: 50%;
     margin-left: 25px;
     margin-top: 25px;
     width: 80%;
     height: 80%;
     transition: 0.5s;
-} */
+}
 
 span#name {
     font-family: times;
@@ -62,7 +62,7 @@ div#biotext {
 div#userinfodiv {
     background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     background: linear-gradient(to bottom right, lightgrey, grey);
-    background: darkred;
+    background-color: green;
     height: 250px;
     /* position: relative; */
     display: inline-block;
