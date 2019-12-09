@@ -2,8 +2,7 @@
 
 You can use the [editor on GitHub](https://github.com/SnehalD14/Building-Energy-Prediction/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-What is exactly the function of your tool? That is, what will it do?
+## Motivation
 With passing years, the notion of having tall buildings for using ground space effectively is booming. Although such buildings are effective, it is becoming expensive to regulate their temperatures. Construction companies have introduced some improvements like cool roofs and higher insulations to cut these costs but assessing the value of energy efficiency improvements can be challenging as there's no way to truly know how much energy a building would have used without these improvements. The function of this tool is to predict the energy consumed by a building without any retrofits and motivate large scale investors to witness the usefulness of these improvements. This tool will take into account building specifications(size, year built, number of floors) and weather conditions (air temperature, wind speed, wind direction) to predict the energy consumed without using any energy saving advancements. 
 
 Why would we need such a tool and who would you expect to use it and benefit from it?
