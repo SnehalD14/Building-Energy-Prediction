@@ -158,8 +158,8 @@ div#dummydiv {
     padding: 15px;
     background: #777;
     color: white;
-    background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    background: darkred;
+/*     background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
+    background: green;
     color: white;
 }
 
