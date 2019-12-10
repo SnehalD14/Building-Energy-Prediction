@@ -30,10 +30,10 @@ div#userinfo {
 
 div#name {
     font-family: times;
-    vertical-align: middle;
-    margin-top: 10px;
+/*     vertical-align: middle; */
+/*     margin-top: 10px; */
     transition: 0.5s;
-    right: 0px;
+/*     right: 0px; */
 }
 
 div#info {
@@ -60,17 +60,17 @@ div#biotext {
 }
 
 div#userinfodiv {
-    background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-    background: linear-gradient(to bottom right, lightgreen, blue);
+/*     background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
+/*     background: linear-gradient(to bottom right, lightgreen, blue); */
     background: #505050;
     height: 250px;
-    /* position: relative; */
+    position: relative;
     display: inline-block;
     transition: 0.4s;
     width: 100%;
     position: fixed;
     z-index: 2;
-    color: white;
+    color: black;
 }
 
 div#userinfodiv .shrink {}
