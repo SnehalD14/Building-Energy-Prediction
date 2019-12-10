@@ -24,16 +24,16 @@ div#userinfo {
     height: 95%;
     display: inline-block;
     position: relative;
-    /* padding-top: 25px; */
+/*     padding-top: 25px; */
     /* padding-left: 25px; */
 }
 
 div#name {
     font-family: times;
-    /* vertical-align: middle; */
-    /* margin-top: 10px; */
+    vertical-align: middle;
+    margin-top: 10px;
     transition: 0.5s;
-    /* right: 0px; */
+    right: 0px;
 }
 
 div#info {
