@@ -7,11 +7,6 @@ img#profilepic {
     transition: 0.5s;
 }
 
-img.resize {
-  max-width:50%;
-  max-height:50%;
-}
-
 span#name {
     font-family: times;
 }
