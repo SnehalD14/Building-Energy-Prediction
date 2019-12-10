@@ -62,7 +62,7 @@ div#biotext {
 div#userinfodiv {
     background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     background: linear-gradient(to bottom right, lightgreen, blue);
-    background: steelblue;
+    background: darkblue;
     height: 250px;
     /* position: relative; */
     display: inline-block;
