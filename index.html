@@ -52,14 +52,31 @@ So we need to make a predictions for each meter of each building. We approached 
 <li>Filled Missing Values</li>
 <li>Applied Four Algorithms</li>
 <li>Compared the performance</li>
+</div>	
 </div>
-</div><div id="skills" class="tabcontent">
+	
+<div id="skills" class="tabcontent">
 <div id="skillstitle" class="tabtitle collapsible active">DATA CLEANING<div class="expand"></div></div>
 <div id="skillstext"  style="max-height: 1000px; "class="textcontent">
-<div>First, we started with analysing the data for missing values and plotted the amount of data available in the train and test set.</div>
-    <img src="images/missing data.png" alt="Missing Data" style="display: block; margin: auto;"></img>
-<div> Parameters such as floor_count, year_built and cloud_coverage had 50% or more than 50% missing values and were dropped. 
-	The missing values in the remaining features were filled with median values of the feature. </div> 
+	<h5><u>Handling Missing Values</u></h5> 
+	<div>First, we started with analysing the data for missing values and plotted the amount of data available in the train and test set.</div>
+    	<img src="images/missing data.png" alt="Missing Data" style="display: block; margin: auto;"></img>
+	<div> Parameters such as floor_count, year_built and cloud_coverage had 50% or more than 50% missing values and were dropped. 
+	The missing values in the remaining features other than timestamp, were filled with median values of the feature due to outliers.
+	The missing values in Timestamp were filled with mean.</div>
+	<h5><u>Exploratary Data Analysis</u></h5>
+	<div>Correlation of features was plotted to understand the impact of dropping features on the model.</div>
+	<img src="images/Correlation.png" alt="Cor" style="display: block; margin: auto;"></img>
+	<div> On analyzing the data further, a serious inconsistency was observed in a few features </div>
+	<img src="images/min max.png" alt="min" style="display: block; margin: auto;"></img>
+	<h5><u>Feature Normalization</u></h5>
+	<div>Features were converted from:
+	<li>Log on square_feet</li>
+	<li>Degree to 16 compass directions for wind direction</li>
+	<li>Wind Speed to beaufort scale (wind speed to observed conditions at land)</li>
+	<h5><u>Conversions</u></h5>
+	<div>Timestamp had to be converted to hour and week of day. Whereas One hot encoding was performed on the remaining data.<div>
+</div> 
 </div>
 </div>
 
