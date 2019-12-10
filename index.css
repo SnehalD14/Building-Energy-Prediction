@@ -1,9 +1,9 @@
 img#profilepic {
-    border-radius: 50%;
+    border-radius: 30%;
     margin-left: 25px;
     margin-top: 25px;
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     transition: 0.5s;
 }
 
