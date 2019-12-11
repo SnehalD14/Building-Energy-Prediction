@@ -29,29 +29,30 @@
 <div id="dummydiv"></div>
 <div>
     <h2 style="color:black;"> Introduction</h2>
-        <p style="color:black; font-size:15px;">   This website is made for Machine Learning Course project at Worcester Polytechnic Institute. The performance of several models is analyzed and compared to Predict the Energy consumption of a building.
-		This project is a Kaggle competition with the title “ASHRAE - Great Energy Predictor III”. Further information about the competition can be obtained on the <a href="https://www.kaggle.com/c/ashrae-energy-prediction/data">Kaggle</a> website
+        <p style="color:black; font-size:15px;">  In this website, we present our work towards Predicting the Energy Consumption of a Building using four different Machine Learning techniques. Our aim is to compare the results from various techniques and explore the effects of data manipulation. This work is based on the running Kaggle competition "ASHRAE - Great Energy Predictor III". Further information about the competition can be obtained on the <a href="https://www.kaggle.com/c/ashrae-energy-prediction/data">Kaggle</a> website. Additionally, the dataset used can be found here: <a href="https://www.kaggle.com/c/ashrae-energy-prediction/data">Kaggle Dataset</a>
 		</p>
 </div>
 <div id="resume-start"><div id="education" class="tabcontent">
 <div id="edutitle" class="tabtitle collapsible active">MOTIVATION<div class="expand"></div></div>
 <div id="edutext" style="max-height: 125px;" class="textcontent">
-    <div> With passing years, the notion of having tall buildings for using ground space effectively is booming. Although such buildings are effective, it is becoming expensive to regulate their temperatures. Construction companies have introduced some improvements like cool roofs and higher insulations to cut these costs but assessing the value of energy efficiency improvements can be challenging as there's no way to truly know how much energy a building would have used without these improvements. 
-	    The function of this tool is to predict the energy consumed by a building without any retrofits and motivate large scale investors to witness the usefulness of these improvements. 
-	    This tool will take into account building specifications(size, year built, number of floors) and weather conditions (air temperature, wind speed, wind direction) to predict the energy consumed without using any energy saving advancements. 
+    <div> 
+    	<p>As cities become more crowded, it has become important to efficiently use ground space by building taller buildings for office spaces and homes. However, these buildings are difficult to heat and cool, and it is becoming increasingly expensive to maintain them. In recent years, there have been many advances to increase the energy efficiency of buildings, such as cool roofs, high-quality insulation, and smart appliances to regulate temperatures. The challenge here is is retroactively calculating how much energy a building would consume without these additions. This calculation will help building owners better understand the improvements from the additions, and will provide energy companies with accurate data to convince others to implement energy-saving modifiers.</p>
+	    <p>The function of this tool is to predict the energy consumed by a building without any retrofits and motivate large scale investors to witness the usefulness of these improvements. This tool will take into account building specifications(size, year built, number of floors) and weather conditions (air temperature, wind speed, wind direction) to predict the energy consumed without using energy saving advancements.</p>
 	    </div>
 </div>
 </div><div id="courses" class="tabcontent">
 <div id="coursestitle" class="tabtitle collapsible active">APPROACH<div class="expand"></div></div>
 <div id="coursestext" style="max-height: 300px;" class="textcontent">
-<div>In this competition we are to create a model to predict an energy usage per building and per meter.
-We are given a dataset of around 1450 buildings containing such information as building id, which is a unique identifier of a building across both train and test dataset. Meter - is the type of meter that measures the data - energy consumption in kWh. Different buildings might have different meters installed. Some of them have only one type of meter, some have all four.
-So we need to make a predictions for each meter of each building. We approached this problem in the following manner</div>
-<li>Performed exploratary Analysis on the data</li>
-<li>Transferred Features</li>
-<li>Filled Missing Values</li>
-<li>Applied Four Algorithms</li>
-<li>Compared the performance</li>
+<div> <p>Our goal is to build a model that predicts a building's energy usage per meter.
+We are given a dataset of energy meter readings of 1450 buildings over three years. Each building has an identifier (building id), square footage, primary use, year built, floor count, and a site id that connects each building to weather conditions measured in the area. Each meter reading contains a timestamp, meter type, and energy consumption in kWh. Different buildings might have different meters installed. Some of them have only one type of meter, some have all four.
+Each reading is also connected to a weather reading with properties such as cloud coverage, air temperature, and wind speed because energy consumption is closely tied to atmospheric temperature and pressure.</p>
+
+<p>We approached this problem with the following steps.</p></div>
+<li>Perform exploratary analysis on the data</li>
+<li>Transfer features</li>
+<li>Fill missing values</li>
+<li>Apply four machine-learning algorithms</li>
+<li>Compare performances</li>
 </div>	
 </div>
 	
@@ -59,23 +60,23 @@ So we need to make a predictions for each meter of each building. We approached 
 <div id="skillstitle" class="tabtitle collapsible active">DATA CLEANING<div class="expand"></div></div>
 <div id="skillstext"  style="max-height: 10000px; "class="textcontent">
 	<h5><u>Handling Missing Values</u></h5> 
-	<div>First, we started with analysing the data for missing values and plotted the amount of data available in the train and test set.</div>
+	<div>We began by analysing the data for missing values and plotting the amount of data available in the training and test sets.</div>
     	<img src="images/missing data.png" alt="Missing Data" style="display: block; margin: auto;"></img>
-	<div> Parameters such as floor_count, year_built and cloud_coverage had 50% or more than 50% missing values and were dropped. 
-	The missing values in the remaining features other than timestamp, were filled with median values of the feature due to outliers.
+	<div> Parameters such as floor_count, year_built and cloud_coverage were missing at least 50% of values and were dropped. 
+	The missing values in the remaining features, other than timestamp, were filled with median values of the feature due to outliers.
 	The missing values in Timestamp were filled with mean.</div>
 	<h5><u>Exploratary Data Analysis</u></h5>
-	<div>Correlation of features was plotted to understand the impact of dropping features on the model.</div>
+	<div>To understand the effect of dropping features, we plotted the correlation between all features. We found that the meter reading was most closely related to the building id and site id, and moderately related to square footage and cloud coverage. Intuitively this makes sense because a given building will be fairly consistent in energy consumption. Additionally, the size of the building and the amount of sun available will be important.</div>
 	<img src="images/Correlation.png" alt="Cor" style="display: block; margin: auto;"></img>
-	<div> On analyzing the data further, a serious inconsistency was observed in a few features </div>
+	<div> On analyzing the data further, we found some an unexpected variance in a few features. This led us to search for outliers to exclude. </div>
 	<img src="images/min max.png" alt="min" style="display: block; margin: auto;"></img>
 	<h5><u>Feature Normalization</u></h5>
-	<div>Features were converted from:
-	<li>Log on square_feet</li>
-	<li>Degree to 16 compass directions for wind direction</li>
+	<div>We also performed the following conversions.:
+	<li>Square feet to log(square feet)</li>
+	<li>Degrees to 16 compass directions for wind direction</li>
 	<li>Wind Speed to beaufort scale (wind speed to observed conditions at land)</li>
-	<h5><u>Conversions</u></h5>
-	<div>Timestamp had to be converted to hour and week of day. Whereas One hot encoding was performed on the remaining data.<div>
+	<li>Timestamp to week and hour of day.</li>
+	<li>We encoded the rest of the data using one-hot encoding.
 </div> 
 </div>
 	</div>
@@ -111,22 +112,13 @@ MODELS
 <h5><u>DECISION TREE WITH BOOSTING</u></h5>
 <h5><u>RANDOM FOREST</u></h5>
 <h5><u>NEURAL NETWORK</u></h5>
+For each algorithm, we initially split the given training data randomly into a training and testing set. Once the model was trained and tested to satisfaction, we then used it to predict outcomes for Kaggles "secret" testing data and obtained our final results.
 <!-- <div id="pgnalg">
 <span style="display:block"><u>POINTER GENERATOR ALGORITHM</u></span>
 <br/>
 <img src="images/pgn.png" style="display: block; margin: auto;"></img>
 </div> -->
 
-</div>
-</div>
-
-
-<div id="data" class="tabcontent">
-    <div id="contacttitle" class="tabtitle collapsible active">DATASET<div class="expand"></div></div>
-    <div id="contacttext" style="max-height: 112px;" class="textcontent">
-	    <div>The Dataset for this project can be found on the <a href="https://www.kaggle.com/c/ashrae-energy-prediction/data">Kaggle: ASHRAE Competition</a> page.
-	    </div>    
-	
 </div>
 </div>
 
@@ -147,6 +139,10 @@ MODELS
     <div> The gradient boosting decison tree was compared with the Random forest. The results are tabulated below: </div>
     <img src="images/Gradient Boosting.png" alt="Boosting" style="display: block; margin: auto;"></img>
     <h4><u>NEURAL NETWORK</u></h4>
+</div>
+<div id="dummydiv2"></div>
+<div>
+        <p style="color:black; font-size:15px;"> This website is part of our final project for CS549:Machine Learning at Worcester Polytechnic Institute. </p>
 </div>
 </div>
 
