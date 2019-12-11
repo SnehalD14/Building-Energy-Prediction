@@ -144,8 +144,8 @@ body {
 }
 
 div#dummydiv {
-    padding: 15px;
-    height: 250px;
+    padding: 10px;
+    height: 200px;
     width: 90%;
     position: relative;
     transition: 0.5s;
