@@ -157,9 +157,6 @@ div#dummydiv {
 
 .tabtitle {
     padding: 15px;
-/*     background: silver ;
-    color: white; */
-/*     background: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%); */
     background: gray;
     color: white;
 }
@@ -241,10 +238,10 @@ div#edurowheader {
 }
 
 div#edurowbe {
-    background: lightgrey;
+    background: AliceBlue ;
 }
 
-.workheading {
+/* .workheading {
     background: cadetblue;
     padding: 8px;
 }
@@ -262,7 +259,7 @@ div#edurowbe {
     padding: 8px;
     padding-top: 0;
 }
-
+ */
 .active~.textcontent .workexpactual+.workexpactual {
     /* margin: 14px; */
 }
