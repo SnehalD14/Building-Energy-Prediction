@@ -58,7 +58,9 @@ div {
 	    <p>The function of this tool is to predict the energy consumed by a building without any retrofits and motivate large scale investors to witness the usefulness of these improvements. This tool will take into account building specifications(size, year built, number of floors) and weather conditions (air temperature, wind speed, wind direction) to predict the energy consumed without using energy saving advancements.</p>
 	    </div>
 </div>
-</div><div id="courses" class="tabcontent">
+</div>
+	
+<div id="courses" class="tabcontent">
 <div id="coursestitle" class="tabtitle collapsible active">APPROACH<div class="expand"></div></div>
 <div id="coursestext" style="max-height: 300px;" class="textcontent">
 <div> <p>Our goal is to build a model that predicts a building's energy usage per meter.
@@ -75,10 +77,10 @@ Each reading is also connected to a weather reading with properties such as clou
 </div>
 	
 <div id="skills" class="tabcontent">
-<div id="skillstitle" class="tabtitle collapsible active">DATA CLEANING<div class="expand"></div></div>
-<div id="skillstext"  style="max-height: 10000px; "class="textcontent">
-	<h5><u>Handling Missing Values</u></h5> 
-	<div>We began by analysing the data for missing values and plotting the amount of data available in the training and test sets.</div>
+   <div id="skillstitle" class="tabtitle collapsible active">DATA CLEANING<div class="expand"></div></div>
+   <div id="skillstext"  style="max-height: 10000px; "class="textcontent">
+        <div><h5><u>Handling Missing Values</u></h5> 
+        <div>We began by analysing the data for missing values and plotting the amount of data available in the training and test sets.</div>
     	<img src="images/missing data.png" alt="Missing Data" style="display: block; margin: auto;"></img>
 	<div> Parameters such as floor_count, year_built and cloud_coverage were missing at least 50% of values and were dropped. 
 	The missing values in the remaining features, other than timestamp, were filled with median values of the feature due to outliers.
@@ -89,54 +91,25 @@ Each reading is also connected to a weather reading with properties such as clou
 	<div> On analyzing the data further, we found some an unexpected variance in a few features. This led us to search for outliers to exclude. </div>
 	<img src="images/min max.png" alt="min" style="display: block; margin: auto;"></img>
 	<h5><u>Feature Normalization</u></h5>
-	<div>We also performed the following conversions.:
+	<div>We also performed the following conversions.:</div>
 	 	<li>Square feet to log(square feet)</li>
 		<li>Degrees to 16 compass directions for wind direction</li>
 		<li>Wind Speed to beaufort scale (wind speed to observed conditions at land)</li>
 		<li>Timestamp to week and hour of day.</li>
 		<li>We encoded the rest of the data using one-hot encoding</li>
-</div> 
 </div>
-	</div>
-	</div>
+</div>
 
 
 <div id="workexp" class="tabcontent">
-<div id="workexptitle" class="tabtitle collapsible active">
-MODELS
-<div class="expand"></div>
-</div>    
+<div id="workexptitle" class="tabtitle collapsible active">MODELS<div class="expand"></div></div>    
 <div id="workexptext" style="max-height: 2000px;" class="textcontent">
-
-<!-- <div id="textrankalg">
-<span style="display:block"><u>TEXTRANK ALGORITHM</u></span>
-<br/>
-<img src="images/page_rank.png" style="display: block; margin: auto;"></img>
-</div>
-<br/>
-<div id="lsaalg">
-<span style="display:block"><u>LATENT SEMANTIC ANALYSIS ALGORITHM</u></span>
-<br/>
-<img src="images/lsa.png" style="display: block; margin: auto;"></img>
-</div>
-<br/>
-<div id="luhnalg">
-<span style="display:block"><u>LUHN's ALGORITHM</u></span>
-<br/>
-<img src="images/luhn.png" style="display: block; margin: auto;"></img>
-</div>
-<br/><br/> -->
 <h5><u>DECISION TREE</u></h5>
 <h5><u>DECISION TREE WITH BOOSTING</u></h5>
 <h5><u>RANDOM FOREST</u></h5>
 <h5><u>NEURAL NETWORK</u></h5>
-For each algorithm, we initially split the given training data randomly into a training and testing set. Once the model was trained and tested to satisfaction, we then used it to predict outcomes for Kaggles "secret" testing data and obtained our final results.
-<!-- <div id="pgnalg">
-<span style="display:block"><u>POINTER GENERATOR ALGORITHM</u></span>
-<br/>
-<img src="images/pgn.png" style="display: block; margin: auto;"></img>
-</div> -->
-
+<p>For each algorithm, we initially split the given training data randomly into a training and testing set. Once the model was trained and tested to satisfaction, we then used it to predict outcomes for Kaggles "secret" testing data and obtained our final results.
+</p>
 </div>
 </div>
 
