@@ -95,6 +95,7 @@ Each reading is also connected to a weather reading with properties such as clou
 	<br>
 	<img src="images/min max.png" alt="min" style="display: block; margin: auto;" height="170"></img>
 	<br>
+	<div>This led us to search for outliers to exclude as well as various normalization methods.</div>
 	<h4><u>Feature Normalization</u></h4>
 	<div>We also performed the following conversions.:</div>
 	 	<li>Square feet to log(square feet)</li>
@@ -102,6 +103,7 @@ Each reading is also connected to a weather reading with properties such as clou
 		<li>Wind Speed to beaufort scale (wind speed to observed conditions at land)</li>
 		<li>Timestamp to week and hour of day.</li>
 		<li>We encoded the rest of the data using one-hot encoding</li>
+	
 </div>
 </div>
 
@@ -115,15 +117,20 @@ Each reading is also connected to a weather reading with properties such as clou
 	<div>Decision tree is a type of supervised learning algorithm that works for both categorical and continuous input and output variables. 
 		In this technique, we split the population or sample into two or more homogeneous sets (or sub-populations) based on most significant splitter / differentiator in input variables.
 		Decision trees are easy to understand, require relatively little effort from users for data preparation and the number of hyper-parameters to be tuned is almost null. 
-<li><u>Gradient Boosting Decision Tree</u> </li>
-	<div>Light GBM is a gradient boosting framework that uses decision tree-based learning algorithms. 
-		It grows the tree vertically while the other algorithm grows the trees horizontally i.e. grows tree leaf-wise while others grow level-wise. It selects the leaf with max delta loss and then grows that leaf.  
-		Light GBM can handle large datasets. It focuses on accuracy and supports GPU Learning. </div>
+
 <li><u>Random Forest</u></li>
 	<div>The random forest is a classification algorithm consisting of many decisions trees. 
 		It uses bagging and feature randomness when building each individual tree to try to create an uncorrelated forest of trees 
 		whose prediction by committee is more accurate than that of any individual tree. Random Forest is robust to outliers, can handle missing data, solves the problem of overfitting and can improve accuracy</div>
-<li><u>Neaural Network</u></li>
+<li><u>Gradient Boosting </u> </li>
+	<div>Light GBM is a gradient boosting framework that uses decision tree-based learning algorithms. 
+		It grows the tree vertically while the other algorithm grows the trees horizontally i.e. grows tree leaf-wise while others grow level-wise. It selects the leaf with max delta loss and then grows that leaf.  
+		Light GBM can handle large datasets. It focuses on accuracy and supports GPU Learning. </div>
+		<ol type="2">
+		<li>Gradient Boosting Decision Tree </li>
+		<li>Gradient Boosting Random Forest</li>
+		</ol>	
+<li><u>Neural Network</u></li>
 	<div>Artificial Neural Network consists of inputs, hidden layers, activation funtion, bias and output. 
 		Each connection is weighted by previous learning events and with each new input of data more learning takes place.
 		 ANNs have the ability to learn and model non-linear and complex relationships. It can generalize and it doesn't impose restrictions on the input.</div>
