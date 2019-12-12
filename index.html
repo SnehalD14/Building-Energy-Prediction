@@ -126,7 +126,7 @@ Each reading is also connected to a weather reading with properties such as clou
 	<div>Light GBM is a gradient boosting framework that uses decision tree-based learning algorithms. 
 		It grows the tree vertically while the other algorithm grows the trees horizontally i.e. grows tree leaf-wise while others grow level-wise. It selects the leaf with max delta loss and then grows that leaf.  
 		Light GBM can handle large datasets. It focuses on accuracy and supports GPU Learning. </div>
-		<ol type="2">
+		<ol type="A">
 		<li>Gradient Boosting Decision Tree </li>
 		<li>Gradient Boosting Random Forest</li>
 		</ol>	
@@ -149,14 +149,14 @@ Each reading is also connected to a weather reading with properties such as clou
 	    <li>Kaggle score with Depth 20: 1.58</li>
 	    <br></br>
 	    <img src="images/decision tree results.png" alt="Decision" style="display: block; margin: auto;"height="255" ></img>
-	m   <br></br>
+	    <br></br>
     <h4><u>RANDOM FOREST</u></h4>  
             <div> The training and testing accuracy were as follows:</div>
 	    <br>
             <img src="images/Random Forest.png" alt="Random" style="display: block; margin: auto;"height="120"></img>
 	    <br>
     <h4><u>GRADIENT BOOSTING DECISION TREE</u></h4>
-            <div> The gradient boosting decison tree was compared with the Random forest. The results are tabulated below: </div>
+            <div> We compared the gradient boosting decision tree with the gradient boosting random forest. The results are shown below: </div>
 	    <br>
             <img src="images/Gradient Boosting.png" alt="Boosting" style="display: block; margin: auto;" height="290"></img>
 	    <br>
@@ -169,10 +169,10 @@ Each reading is also connected to a weather reading with properties such as clou
 <div id="projects" class="tabcontent">
     <div id="projectstitle" class="tabtitle collapsible active">CONCLUSION<div class="expand"></div></div>
     <div id="projectstext" style="max-height: 1500px;" class="textcontent">
-	<div> The project is heavily oriented towards feature extraction and analysis. In Machine Learning, not just the model but the features play an integral part too.
-Sometimes columns seem useful (e.g. floor count in our case) but need not necessarily impact the accuracy. We worked on the conversion of numerical attributes to categorical
-data and could still only obtain an overall score of 1.1. After testing several algorithms on the data, we found the gradient boosting method to work the best on our data with small training time and the Kaggle score to be 1.00.
-</div>    
+	<div> Our main takeaway from this project was that Machine Learning techniques are partially about choosing the right model, and partially about data analysis and feature extraction.
+		Sometimes, a feature that intuitively seems very important has no affect on the model's accuracy, such as floor count in our case.
+		After converting numerical values to categorical, we still only obtained an overall RMSLE value of 1.1, though the current competition leader has an RMSLE of 0.93. 
+		We expect that more data analysis is necessary to improve our results. Our final result after testing several algorithms is that gradient boosting worked best, giving us an RMSLE of 1.00 in a short training time.</div>    
 </div>
 <div id="dummydiv2"></div>
 <div>
