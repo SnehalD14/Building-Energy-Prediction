@@ -23,8 +23,8 @@
 <div class="identifier" id="cou">APPROACH</div>
 <div class="identifier" id="ski">DATA CLEANING</div>
 <div class="identifier" id="exp">MODELS</div>
-<div class="identifier" id="con">RESULTS</div>
-<div class="identifier" id="aca">CONCLUSION</div></div></div></div>
+<div class="identifier" id="aca">RESULTS</div>
+<div class="identifier" id="con">CONCLUSION</div></div></div></div>
 	
 <div id="dummydiv"></div>
 <head>
@@ -80,19 +80,20 @@ Each reading is also connected to a weather reading with properties such as clou
 <div id="skills" class="tabcontent">
    <div id="skillstitle" class="tabtitle collapsible active">DATA CLEANING<div class="expand"></div></div>
    <div id="skillstext"  style="max-height: 10000px; "class="textcontent">
-        <div><h5><u>Handling Missing Values</u></h5> 
+        <div><h4><u>Handling Missing Values</u></h4> 
         <div>We began by analysing the data for missing values and plotting the amount of data available in the training and test sets.</div>
-    	<img src="images/missing data.png" alt="Missing Data" style="display: block; margin: auto;"></img>
+    	<img src="images/missing data.png" alt="Missing Data" style="display: block; margin: auto;" height="260"></img>
+	<br>
 	<div> Parameters such as floor_count, year_built and cloud_coverage were missing at least 50% of values and were dropped. 
 	The missing values in the remaining features, other than timestamp, were filled with median values of the feature due to outliers.
 	The missing values in Timestamp were filled with mean.</div>
-	<h5><u>Exploratary Data Analysis</u></h5>
+	<h4><u>Exploratary Data Analysis</u></h4>
 	<div>To understand the effect of dropping features, we plotted the correlation between all features. We found that the meter reading was most closely related to the building id and site id, and moderately related to square footage and cloud coverage. Intuitively this makes sense because a given building will be fairly consistent in energy consumption. Additionally, the size of the building and the amount of sun available will be important.</div>
 	<br>
 	<img src="images/Correlation.png" alt="Cor" style="display: block; margin: auto;" height="400"></img>
 	<div> On analyzing the data further, we found some an unexpected variance in a few features. This led us to search for outliers to exclude. </div>
-	<img src="images/min max.png" alt="min" style="display: block; margin: auto;"></img>
-	<h5><u>Feature Normalization</u></h5>
+	<img src="images/min max.png" alt="min" style="display: block; margin: auto;" height="170"></img>
+	<h4><u>Feature Normalization</u></h4>
 	<div>We also performed the following conversions.:</div>
 	 	<li>Square feet to log(square feet)</li>
 		<li>Degrees to 16 compass directions for wind direction</li>
@@ -122,26 +123,29 @@ Each reading is also connected to a weather reading with properties such as clou
     <div>Tree with depth 17 is the best decision tree. The model starts overfitting after that</div>
 	    <li>Kaggle score with Depth 17: 1.45</li>
 	    <li>Kaggle score with Depth 20: 1.58</li>
-	    <img src="images/decision tree results.png" alt="Decision" style="display: block; margin: auto;"></img>
+	    <br>
+	    <img src="images/decision tree results.png" alt="Decision" style="display: block; margin: auto;"height="255" ></img>
+	    <br>
     <h4><u>RANDOM FOREST</u></h4>  
             <div> The training and testing accuracy were as follows:</div>
-            <img src="images/Random Forest.png" alt="Random" style="display: block; margin: auto;"></img>
-    	
+	    <br>
+            <img src="images/Random Forest.png" alt="Random" style="display: block; margin: auto;"height="120"></img>
+	    <br>
     <h4><u>GRADIENT BOOSTING DECISION TREE</u></h4>
             <div> The gradient boosting decison tree was compared with the Random forest. The results are tabulated below: </div>
-            <img src="images/Gradient Boosting.png" alt="Boosting" style="display: block; margin: auto;"></img>
+	    <br>
+            <img src="images/Gradient Boosting.png" alt="Boosting" style="display: block; margin: auto;" height="290"></img>
+	    <br>
     <h4><u>NEURAL NETWORK</u></h4></div>
+	    
 
 </div>
 </div>
 
-<!-- /*<div id="projects" class="tabcontent">
+<div id="projects" class="tabcontent">
     <div id="projectstitle" class="tabtitle collapsible active">CONCLUSION<div class="expand"></div></div>
-    <div id="projectstext" style="max-height: 1500px;" class="textcontent">*/ -->
-   <div id="data" class="tabcontent">
-    <div id="contacttitle" class="tabtitle collapsible active">CONCLUSION1<div class="expand"></div></div>
-    <div id="contacttext" style="max-height: 1500px;" class="textcontent">
-	<div> The gradient boosting decison tree was compared with the Random forest. The results are tabulated below: </div>    
+    <div id="projectstext" style="max-height: 1500px;" class="textcontent">
+	<div> </div>    
 </div>
 <div id="dummydiv2"></div>
 <div>
