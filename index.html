@@ -92,7 +92,9 @@ Each reading is also connected to a weather reading with properties such as clou
 	<br>
 	<img src="images/Correlation.png" alt="Cor" style="display: block; margin: auto;" height="400"></img>
 	<div> On analyzing the data further, we found some an unexpected variance in a few features. This led us to search for outliers to exclude. </div>
+	<br>
 	<img src="images/min max.png" alt="min" style="display: block; margin: auto;" height="170"></img>
+	<br>
 	<h4><u>Feature Normalization</u></h4>
 	<div>We also performed the following conversions.:</div>
 	 	<li>Square feet to log(square feet)</li>
@@ -107,10 +109,13 @@ Each reading is also connected to a weather reading with properties such as clou
 <div id="workexp" class="tabcontent">
 <div id="workexptitle" class="tabtitle collapsible active">MODELS<div class="expand"></div></div>    
 <div id="workexptext" style="max-height: 2000px;" class="textcontent">
-<h5><u>DECISION TREE</u></h5>
-<h5><u>DECISION TREE WITH BOOSTING</u></h5>
-<h5><u>RANDOM FOREST</u></h5>
-<h5><u>NEURAL NETWORK</u></h5>
+<div>We implemented the following four Machine Learning Algorithms:</div>
+<ol type="1">
+<li>DECISION TREE REGRESSOR</li>
+<li>GRADIENT BOOSTING DECISION TREE</li>
+<li>RANDOM FOREST</li>
+<li>NEURAL NETWORK</li>
+</ol>
 <p>For each algorithm, we initially split the given training data randomly into a training and testing set. Once the model was trained and tested to satisfaction, we then used it to predict outcomes for Kaggles "secret" testing data and obtained our final results.
 </p>
 </div>
@@ -123,9 +128,9 @@ Each reading is also connected to a weather reading with properties such as clou
     <div>Tree with depth 17 is the best decision tree. The model starts overfitting after that</div>
 	    <li>Kaggle score with Depth 17: 1.45</li>
 	    <li>Kaggle score with Depth 20: 1.58</li>
-	    <br>
+	    <br></br>
 	    <img src="images/decision tree results.png" alt="Decision" style="display: block; margin: auto;"height="255" ></img>
-	    <br>
+	m   <br></br>
     <h4><u>RANDOM FOREST</u></h4>  
             <div> The training and testing accuracy were as follows:</div>
 	    <br>
@@ -145,10 +150,9 @@ Each reading is also connected to a weather reading with properties such as clou
 <div id="projects" class="tabcontent">
     <div id="projectstitle" class="tabtitle collapsible active">CONCLUSION<div class="expand"></div></div>
     <div id="projectstext" style="max-height: 1500px;" class="textcontent">
-	<div> Project is heavily oriented towards features extraction and analysis. In Machine Learning, not just the model but the features play an integral part too.
-Sometimes columns seems useful (e.g. floor count in our case) but need not necessarily impact the accuracy. We worked on conversion of numerical attributes to categorical
-data and could still only obtain an overall score of 1.1. After testing several algorithms on the data, we found the gradient boosting method to work the best on our data 
-with small training time and the Kaggle score to be 1.00.
+	<div> The project is heavily oriented towards feature extraction and analysis. In Machine Learning, not just the model but the features play an integral part too.
+Sometimes columns seem useful (e.g. floor count in our case) but need not necessarily impact the accuracy. We worked on the conversion of numerical attributes to categorical
+data and could still only obtain an overall score of 1.1. After testing several algorithms on the data, we found the gradient boosting method to work the best on our data with small training time and the Kaggle score to be 1.00.
 </div>    
 </div>
 <div id="dummydiv2"></div>
