@@ -111,10 +111,20 @@ Each reading is also connected to a weather reading with properties such as clou
 <div id="workexptext" style="max-height: 2000px;" class="textcontent">
 <div>We implemented the following four Machine Learning Algorithms:</div>
 <ol type="1">
-<li>DECISION TREE REGRESSOR</li>
-<li>GRADIENT BOOSTING DECISION TREE</li>
+<li>Decision Tree Regressor</li>
+	<div>Decision tree is a type of supervised learning algorithm that works for both categorical and continuous input and output variables. 
+		In this technique, we split the population or sample into two or more homogeneous sets (or sub-populations) based on most significant splitter / differentiator in input variables.
+		Decision trees are easy to understand, require relatively little effort from users for data preparation and the number of hyper-parameters to be tuned is almost null. 
+<li>Gradient Boosting Decision Tree </li>
+	<div>Light GBM is a gradient boosting framework that uses decision tree-based learning algorithms. 
+		It grows the tree vertically while the other algorithm grows the trees horizontally i.e. grows tree leaf-wise while others grow level-wise. It selects the leaf with max delta loss and then grows that leaf.  
+		Light GBM can handle large datasets. It focuses on accuracy and supports GPU Learning. </div>
 <li>RANDOM FOREST</li>
+	<div>The random forest is a classification algorithm consisting of many decisions trees. 
+		It uses bagging and feature randomness when building each individual tree to try to create an uncorrelated forest of trees 
+		whose prediction by committee is more accurate than that of any individual tree. Random Forest is robust to outliers, can handle missing data, solves the problem of overfitting and can improve accuracy</div>
 <li>NEURAL NETWORK</li>
+	<div>
 </ol>
 <p>For each algorithm, we initially split the given training data randomly into a training and testing set. Once the model was trained and tested to satisfaction, we then used it to predict outcomes for Kaggles "secret" testing data and obtained our final results.
 </p>
